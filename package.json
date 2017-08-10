@@ -7,7 +7,7 @@
   "author": "Anoop Varghese",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server --progress --colors --hot --config ./webpack.config.js"
+    "start": "webpack-dev-server --colors --config ./webpack.config.js"
   },
   "devDependencies": {
     "webpack": "^3.8.1",
