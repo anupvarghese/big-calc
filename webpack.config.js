@@ -10,6 +10,13 @@ module.exports = {
     publicPath: 'http://localhost:3000/',
     filename: 'bundle.js'
   },
+  module: {
+    rules: [{
+      test: /\.(js|jsx)$/,
+      exclude: /node_modules/,
+      use: 'babel-loader'
+    }]
+  },
   devServer: {
     contentBase: './dist',
     port: 3000,

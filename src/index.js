@@ -1,1 +1,3 @@
-console.log('******IS IT WORKING1*****');
+const a = () => 1 + 1;
+
+console.log(a());
