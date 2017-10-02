@@ -1,3 +1,10 @@
-const a = () => 1 + 1;
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-console.log(a());
+class Hello extends React.Component {
+  render() {
+    return <div>Hello {this.props.name}</div>;
+  }
+}
+
+ReactDOM.render(<Hello name="John" />, document.getElementById('app'));
