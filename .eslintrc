@@ -1,0 +1,6 @@
+{
+  "extends": ["last", "prettier/react", "plugin:react/recommended"],
+  "globals": {
+    "document": true
+  }
+}
