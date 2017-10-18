@@ -8,6 +8,7 @@ const wrapper = css({
   gridTemplateColumns: 'repeat(4, 1fr)',
   gridGap: '10px',
   fontSize: '40px',
+  fontFamily: 'Lato, sans-serif',
   gridAutoRows: '390px',
   gridTemplateAreas: `". a a ."
   ". a a ."`,
