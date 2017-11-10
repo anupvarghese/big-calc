@@ -1,7 +1,7 @@
 {
-  "name": "react-starter",
+  "name": "big-calc",
   "version": "1.0.0",
-  "description": "Starter App for React",
+  "description": "Big Calculator",
   "main": "index.js",
   "repository": "git@github.com:anupvarghese/react-starter.git",
   "author": "Anoop Varghese",
@@ -10,7 +10,9 @@
     "lint": "yarn eslint -- .",
     "lint:fix": "yarn lint -- --fix",
     "start": "webpack-dev-server --colors --config ./webpack.config.babel.js",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "lint-staged": {
     "*.js": [
@@ -33,7 +35,8 @@
     "lint-staged": "^4.2.3",
     "prettier": "1.7.4",
     "webpack": "^3.8.1",
-    "webpack-dev-server": "^2.9.2"
+    "webpack-dev-server": "^2.9.2",
+    "@storybook/react": "^3.2.13"
   },
   "dependencies": {
     "glamor": "^2.20.40",
