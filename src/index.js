@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import PropTypes from 'prop-types';
 import { css } from 'glamor';
-import Button from './atoms/button';
+import Numbers from './components/Numbers';
 
 class BigCalc extends React.Component {
   constructor(props) {
@@ -24,31 +23,22 @@ class BigCalc extends React.Component {
       color: 'green',
       fontSize: '2rem',
       fontFamily: 'lato',
-      margin: '1rem 0 0 1rem',
-    };
-
-    const buttonStyle = {
-      color: 'tomato',
-      fontSize: '1rem',
-      fontFamily: 'lato',
-      margin: '1rem',
+      display: 'grid',
+      gridTemplateColumns: '100px 100px 100px',
+      gridTemplateRows: '100px 100px 100px 100px 100px',
+      gridGap: '10px',
+      justifyContent: 'center',
+      alignContent: 'center',
     };
 
     return (
       <div>
         <div {...css(style)}>
-          Hello {this.props.name} You clicked here {this.state.count} times!
+          <Numbers />
         </div>
-        <Button onClick={this.handleClick} style={css(buttonStyle)}>
-          Click Me
-        </Button>
       </div>
     );
   }
 }
-
-BigCalc.propTypes = {
-  name: PropTypes.string.isRequired,
-};
 
 ReactDOM.render(<BigCalc name="There" />, document.getElementById('app'));
