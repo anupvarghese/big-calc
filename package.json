@@ -7,7 +7,7 @@
   "author": "Anoop Varghese",
   "license": "MIT",
   "scripts": {
-    "lint": "yarn eslint -- .",
+    "lint": "yarn eslint src",
     "lint:fix": "yarn lint -- --fix",
     "build:dev": "webpack --config ./webpack.config.babel.js",
     "start": "webpack-dev-server --colors --config ./webpack.config.babel.js",
