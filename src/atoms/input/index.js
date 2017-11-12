@@ -5,12 +5,11 @@ import PropTypes from 'prop-types';
 const propTypes = {
   onChange: PropTypes.func.isRequired,
   children: PropTypes.node.isRequired,
+  style: PropTypes.object.isRequired,
 };
 
-const Input = (props, style) => {
-  return (
-    <input {...css(style)} onChange={props.onChange} value={props.children} />
-  );
+const Input = ({ children, style, ...props }) => {
+  return <input {...css(style)} value={children} {...props} />;
 };
 
 Input.propTypes = propTypes;

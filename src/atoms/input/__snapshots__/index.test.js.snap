@@ -1,8 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`input renders Input 1`] = `
+.css-1ezp9xe,
+[data-css-1ezp9xe] {
+  color: red;
+}
+
 <input
-  onChange={undefined}
+  data-css-1ezp9xe=""
+  onChange={[Function]}
   value="Hello"
 />
 `;

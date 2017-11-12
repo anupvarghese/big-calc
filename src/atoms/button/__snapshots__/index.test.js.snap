@@ -1,11 +1,12 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`button renders Button 1`] = `
+.css-1ezp9xe,
+[data-css-1ezp9xe] {
+  color: red;
+}
+
 <button
-  style={
-    Object {
-      "color": "red",
-    }
-  }
+  data-css-1ezp9xe=""
 />
 `;
