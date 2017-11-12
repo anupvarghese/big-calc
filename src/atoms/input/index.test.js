@@ -2,14 +2,18 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 import serializer from 'jest-glamor-react';
 
-import Button from './';
+import Input from './';
 
 expect.addSnapshotSerializer(serializer);
 
-describe('button', () => {
-  it('renders Button', () => {
+describe('input', () => {
+  it('renders Input', () => {
     const button = renderer
-      .create(<Button style={{ color: 'red' }} />)
+      .create(
+        <Input style={{ color: 'red' }} onChange={() => {}}>
+          Hello
+        </Input>,
+      )
       .toJSON();
     expect(button).toMatchSnapshot();
   });
