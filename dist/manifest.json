@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+
+  "name": "Big Calc",
+  "description": "This extension will show how decimals work in JS",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_popup": "index.html"
+  },
+  "permissions": ["activeTab"],
+  "icons": {
+    "16": "big-calc-16.png",
+    "48": "big-calc-48.png",
+    "128": "big-calc-128.png"
+  }
+}
