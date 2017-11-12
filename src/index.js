@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { css } from 'glamor';
 import Button from './atoms/button';
 
-class Hello extends React.Component {
+class BigCalc extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -47,8 +47,8 @@ class Hello extends React.Component {
   }
 }
 
-Hello.propTypes = {
+BigCalc.propTypes = {
   name: PropTypes.string.isRequired,
 };
 
-ReactDOM.render(<Hello name="There" />, document.getElementById('app'));
+ReactDOM.render(<BigCalc name="There" />, document.getElementById('app'));
