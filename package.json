@@ -9,6 +9,7 @@
   "scripts": {
     "lint": "yarn eslint -- .",
     "lint:fix": "yarn lint -- --fix",
+    "build:dev": "webpack --config ./webpack.config.babel.js",
     "start": "webpack-dev-server --colors --config ./webpack.config.babel.js",
     "precommit": "lint-staged",
     "storybook": "start-storybook -p 6006",
@@ -17,10 +18,7 @@
     "test:jestwatch": "NODE_ENV=test jest --watch"
   },
   "lint-staged": {
-    "*.js": [
-      "yarn lint -- --fix",
-      "git add"
-    ]
+    "*.js": ["yarn lint -- --fix", "git add"]
   },
   "devDependencies": {
     "@storybook/react": "^3.2.13",
