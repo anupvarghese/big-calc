@@ -10,9 +10,7 @@ describe('input', () => {
   it('renders Input', () => {
     const button = renderer
       .create(
-        <Input style={{ color: 'red' }} onChange={() => {}}>
-          Hello
-        </Input>,
+        <Input style={{ color: 'red' }} onChange={() => {}} value="Hello" />,
       )
       .toJSON();
     expect(button).toMatchSnapshot();

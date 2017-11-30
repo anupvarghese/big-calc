@@ -7,10 +7,12 @@ import Input from './';
 
 storiesOf('Input')
   .add('with text', () => (
-    <Input onChange={action('onchange')} style={{ color: 'red' }}>
-      Hello Input
-    </Input>
+    <Input
+      onChange={action('onchange')}
+      baseStyle={{ color: 'red' }}
+      value="Hello Input"
+    />
   ))
   .add('with some emoji', () => (
-    <Input onChange={action('onchange')}>😀 😎 👍 💯</Input>
+    <Input onChange={action('onchange')} value="😀 😎 👍 💯" />
   ));

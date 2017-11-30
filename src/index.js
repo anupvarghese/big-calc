@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { css } from 'glamor';
 import Numbers from './components/Numbers';
+import Input from './atoms/input';
 
 class BigCalc extends React.Component {
   constructor(props) {
@@ -33,6 +34,13 @@ class BigCalc extends React.Component {
 
     return (
       <div>
+        <Input
+          baseStyle={{
+            height: '40px',
+            width: '100%',
+            border: '1px solid gray',
+          }}
+        />
         <div {...css(style)}>
           <Numbers />
         </div>
