@@ -2,5 +2,8 @@
   "extends": ["last", "prettier/react", "plugin:react/recommended"],
   "globals": {
     "document": true
+  },
+  "env": {
+    "jest": true
   }
 }
