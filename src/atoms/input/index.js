@@ -1,16 +1,14 @@
+// @flow
 import React from 'react';
 import { css } from 'glamor';
-import PropTypes from 'prop-types';
 
-const propTypes = {
-  onChange: PropTypes.func.isRequired,
-  baseStyle: PropTypes.object.isRequired,
+const inputT = {
+  onChange: () => {},
+  baseStyle: Object,
 };
 
-const Input = ({ baseStyle, ...props }) => {
+const Input = ({ baseStyle, ...props }: inputT) => {
   return <input {...css(baseStyle)} {...props} />;
 };
-
-Input.propTypes = propTypes;
 
 export default Input;
