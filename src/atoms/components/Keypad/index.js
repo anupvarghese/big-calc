@@ -3,11 +3,12 @@
 import React from 'react';
 import { css } from 'glamor';
 
-const keypadStyle = {
+const baseKeypadStyle = {
   display: 'flex',
-  width: '400px',
   flexDirection: 'column',
   border: '1px solid tomato',
+  borderRadius: '4px',
+  marginTop: '0.5rem',
 };
 
 const keyRowStyle = {
@@ -26,25 +27,29 @@ const keyStyle = {
   padding: '1rem',
 };
 
-type RowT = {
+type rowT = {
   style: ?Object,
   children: React.Node,
 };
 
-type KeyT = {
+type keyT = {
   style: ?Object,
   children: React.Node,
 };
 
-const Row = ({ style, children }: RowT) => (
+type keypadT = {
+  keypadStyle: ?Object,
+};
+
+const Row = ({ style, children }: rowT) => (
   <div {...css(keyRowStyle, style)}>{children}</div>
 );
-const Key = ({ style, children }: KeyT) => (
+const Key = ({ style, children }: keyT) => (
   <div {...css(keyStyle, style)}>{children}</div>
 );
 
-const Keypad = () => (
-  <div {...css(keypadStyle)}>
+const Keypad = ({ keypadStyle }: keypadT) => (
+  <div {...css(baseKeypadStyle, keypadStyle)}>
     <Row>
       <Key>AC</Key>
       <Key>+/-</Key>
