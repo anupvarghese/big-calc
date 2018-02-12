@@ -1,0 +1,257 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Calculator renders Calculator 1`] = `
+.css-1rh9gak,
+[data-css-1rh9gak] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+.css-9v06sd,
+[data-css-9v06sd] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+}
+
+.css-rvzscm,
+[data-css-rvzscm] {
+  min-height: 4rem;
+  flex-basis: 100%;
+  border-radius: 4px;
+  border: 1px solid tomato;
+  font-size: 1.5rem;
+  -webkit-flex-basis: 100%;
+}
+
+.css-rvzscm:focus,
+[data-css-rvzscm]:focus {
+  outline: none !important;
+  border: 1px solid blue;
+  box-shadow: 0 0 10px #719ECE;
+  border-radius: 4px;
+}
+
+.css-tcqo1y,
+[data-css-tcqo1y] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid tomato;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+}
+
+.css-1qeez79,
+[data-css-1qeez79] {
+  flex: 2;
+  -webkit-flex: 2;
+}
+
+.css-q8ffom,
+[data-css-q8ffom] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: row;
+  flex: 2;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -webkit-flex: 2;
+}
+
+.css-h0wfqv,
+[data-css-h0wfqv] {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+}
+
+.css-zcaaxo,
+[data-css-zcaaxo] {
+  flex: 1;
+  margin: 0.5rem;
+  border: 1px solid tomato;
+  padding: 1rem;
+  -webkit-flex: 1;
+}
+
+<div
+  data-css-1rh9gak=""
+>
+  <div
+    data-css-9v06sd=""
+  >
+    <input
+      data-css-rvzscm=""
+      disabled={true}
+      type="number"
+      value={undefined}
+    />
+  </div>
+  <div
+    data-css-tcqo1y=""
+  >
+    <div
+      data-css-h0wfqv=""
+    >
+      <div
+        data-css-zcaaxo=""
+      >
+        AC
+      </div>
+      <div
+        data-css-zcaaxo=""
+      >
+        +/-
+      </div>
+      <div
+        data-css-zcaaxo=""
+      >
+        %
+      </div>
+      <div
+        data-css-zcaaxo=""
+      >
+        /
+      </div>
+    </div>
+    <div
+      data-css-h0wfqv=""
+    >
+      <div
+        data-css-zcaaxo=""
+      >
+        7
+      </div>
+      <div
+        data-css-zcaaxo=""
+      >
+        8
+      </div>
+      <div
+        data-css-zcaaxo=""
+      >
+        9
+      </div>
+      <div
+        data-css-zcaaxo=""
+      >
+        X
+      </div>
+    </div>
+    <div
+      data-css-h0wfqv=""
+    >
+      <div
+        data-css-zcaaxo=""
+      >
+        4
+      </div>
+      <div
+        data-css-zcaaxo=""
+      >
+        5
+      </div>
+      <div
+        data-css-zcaaxo=""
+      >
+        6
+      </div>
+      <div
+        data-css-zcaaxo=""
+      >
+        -
+      </div>
+    </div>
+    <div
+      data-css-h0wfqv=""
+    >
+      <div
+        data-css-zcaaxo=""
+      >
+        1
+      </div>
+      <div
+        data-css-zcaaxo=""
+      >
+        2
+      </div>
+      <div
+        data-css-zcaaxo=""
+      >
+        3
+      </div>
+      <div
+        data-css-zcaaxo=""
+      >
+        +
+      </div>
+    </div>
+    <div
+      data-css-h0wfqv=""
+    >
+      <div
+        data-css-1qeez79=""
+      >
+        <div
+          data-css-zcaaxo=""
+        >
+          0
+        </div>
+      </div>
+      <div
+        data-css-q8ffom=""
+      >
+        <div
+          data-css-zcaaxo=""
+        >
+          .
+        </div>
+        <div
+          data-css-zcaaxo=""
+        >
+          =
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
