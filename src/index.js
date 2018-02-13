@@ -1,52 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { css } from 'glamor';
-import Numbers from './components/Numbers';
-import Input from './atoms/input';
+import Calculator from '../src/atoms/components/Calculator';
 
-class BigCalc extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      count: 0,
-    };
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  handleClick() {
-    this.setState({
-      count: this.state.count + 1,
-    });
-  }
-
-  render() {
-    const style = {
-      color: 'green',
-      fontSize: '2rem',
-      fontFamily: 'lato',
-      display: 'grid',
-      gridTemplateColumns: '100px 100px 100px',
-      gridTemplateRows: '100px 100px 100px 100px 100px',
-      gridGap: '10px',
-      justifyContent: 'center',
-      alignContent: 'center',
-    };
-
-    return (
-      <div>
-        <Input
-          baseStyle={{
-            height: '40px',
-            width: '100%',
-            border: '1px solid gray',
-          }}
-        />
-        <div {...css(style)}>
-          <Numbers />
-        </div>
-      </div>
-    );
-  }
-}
-
-ReactDOM.render(<BigCalc name="There" />, document.getElementById('app'));
+ReactDOM.render(<Calculator />, document.getElementById('app'));
