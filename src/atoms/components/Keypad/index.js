@@ -23,7 +23,7 @@ const keyRowStyle = {
 const keyStyle = {
   flex: 1,
   margin: '0.5rem',
-  border: '1px solid tomato',
+  border: `1px solid tomato`,
   padding: '1rem',
 };
 
@@ -34,56 +34,56 @@ type rowT = {
 
 type keyT = {
   style: ?Object,
-  children: React.Node,
+  handleOnClick: () => {},
+  tag: string,
 };
 
 type keypadT = {
   keypadStyle: ?Object,
+  handleKeyClick: () => {},
 };
 
 const Row = ({ style, children }: rowT) => (
   <div {...css(keyRowStyle, style)}>{children}</div>
 );
-const Key = ({ style, children }: keyT) => (
-  <div {...css(keyStyle, style)}>{children}</div>
-);
-
-const Keypad = ({ keypadStyle }: keypadT) => (
-  <div {...css(baseKeypadStyle, keypadStyle)}>
-    <Row>
-      <Key>AC</Key>
-      <Key>+/-</Key>
-      <Key>%</Key>
-      <Key>/</Key>
-    </Row>
-    <Row>
-      <Key>7</Key>
-      <Key>8</Key>
-      <Key>9</Key>
-      <Key>X</Key>
-    </Row>
-    <Row>
-      <Key>4</Key>
-      <Key>5</Key>
-      <Key>6</Key>
-      <Key>-</Key>
-    </Row>
-    <Row>
-      <Key>1</Key>
-      <Key>2</Key>
-      <Key>3</Key>
-      <Key>+</Key>
-    </Row>
-    <Row>
-      <div {...css({ flex: 2 })}>
-        <Key>0</Key>
-      </div>
-      <div {...css({ display: 'flex', flexDirection: 'row', flex: 2 })}>
-        <Key style={{ flex: 1 }}>.</Key>
-        <Key style={{ flex: 1 }}>=</Key>
-      </div>
-    </Row>
+const Key = ({ style, handleOnClick, tag }: keyT) => (
+  <div {...css(keyStyle, style)} onClick={handleOnClick(tag)}>
+    {tag}
   </div>
 );
+
+const Keypad = ({ keypadStyle, handleKeyClick }: keypadT) => {
+  const keyProps = {
+    handleOnClick: handleKeyClick,
+  };
+  return (
+    <div {...css(baseKeypadStyle, keypadStyle)}>
+      <Row>
+        {['AC', '+/-', '%', '/'].map(k => (
+          <Key key={k} tag={k} {...keyProps} />
+        ))}
+      </Row>
+      <Row>
+        {['7', '8', '9', 'X'].map(k => <Key key={k} tag={k} {...keyProps} />)}
+      </Row>
+      <Row>
+        {['4', '5', '6', '-'].map(k => <Key key={k} tag={k} {...keyProps} />)}
+      </Row>
+      <Row>
+        {['1', '2', '3', '+'].map(k => <Key key={k} tag={k} {...keyProps} />)}
+      </Row>
+      <Row>
+        <div {...css({ flex: 2 })}>
+          <Key key="0" tag="0" {...keyProps} />
+        </div>
+        <div {...css({ display: 'flex', flexDirection: 'row', flex: 2 })}>
+          {['.', '='].map(k => (
+            <Key style={{ flex: 1 }} key={k} tag={k} {...keyProps} />
+          ))}
+        </div>
+      </Row>
+    </div>
+  );
+};
 
 export default Keypad;
