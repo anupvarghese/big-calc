@@ -11,6 +11,13 @@ class Calculator extends Component {
     };
   }
 
+  handleKeyClick = tag => () => {
+    this.setState({
+      clickedTag: tag,
+      display: Number(this.state.display + tag),
+    });
+  };
+
   render() {
     return (
       <div
@@ -20,8 +27,8 @@ class Calculator extends Component {
           width: '300px',
         })}
       >
-        <Display />
-        <Keypad />
+        <Display value={this.state.display} />
+        <Keypad handleKeyClick={this.handleKeyClick} />
       </div>
     );
   }
