@@ -8,7 +8,9 @@ expect.addSnapshotSerializer(serializer);
 
 describe('Keypad', () => {
   it('renders Keypad', () => {
-    const keypad = renderer.create(<Keypad />).toJSON();
+    const keypad = renderer
+      .create(<Keypad handleKeyClick={() => {}} />)
+      .toJSON();
     expect(keypad).toMatchSnapshot();
   });
 });
