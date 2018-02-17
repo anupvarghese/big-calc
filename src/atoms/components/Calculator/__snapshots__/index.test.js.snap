@@ -123,7 +123,7 @@ exports[`Calculator renders Calculator 1`] = `
       data-css-rvzscm=""
       disabled={true}
       type="number"
-      value={undefined}
+      value={0}
     />
   </div>
   <div
@@ -134,21 +134,25 @@ exports[`Calculator renders Calculator 1`] = `
     >
       <div
         data-css-zcaaxo=""
+        onClick={[Function]}
       >
         AC
       </div>
       <div
         data-css-zcaaxo=""
+        onClick={[Function]}
       >
         +/-
       </div>
       <div
         data-css-zcaaxo=""
+        onClick={[Function]}
       >
         %
       </div>
       <div
         data-css-zcaaxo=""
+        onClick={[Function]}
       >
         /
       </div>
@@ -158,21 +162,25 @@ exports[`Calculator renders Calculator 1`] = `
     >
       <div
         data-css-zcaaxo=""
+        onClick={[Function]}
       >
         7
       </div>
       <div
         data-css-zcaaxo=""
+        onClick={[Function]}
       >
         8
       </div>
       <div
         data-css-zcaaxo=""
+        onClick={[Function]}
       >
         9
       </div>
       <div
         data-css-zcaaxo=""
+        onClick={[Function]}
       >
         X
       </div>
@@ -182,21 +190,25 @@ exports[`Calculator renders Calculator 1`] = `
     >
       <div
         data-css-zcaaxo=""
+        onClick={[Function]}
       >
         4
       </div>
       <div
         data-css-zcaaxo=""
+        onClick={[Function]}
       >
         5
       </div>
       <div
         data-css-zcaaxo=""
+        onClick={[Function]}
       >
         6
       </div>
       <div
         data-css-zcaaxo=""
+        onClick={[Function]}
       >
         -
       </div>
@@ -206,21 +218,25 @@ exports[`Calculator renders Calculator 1`] = `
     >
       <div
         data-css-zcaaxo=""
+        onClick={[Function]}
       >
         1
       </div>
       <div
         data-css-zcaaxo=""
+        onClick={[Function]}
       >
         2
       </div>
       <div
         data-css-zcaaxo=""
+        onClick={[Function]}
       >
         3
       </div>
       <div
         data-css-zcaaxo=""
+        onClick={[Function]}
       >
         +
       </div>
@@ -233,6 +249,7 @@ exports[`Calculator renders Calculator 1`] = `
       >
         <div
           data-css-zcaaxo=""
+          onClick={[Function]}
         >
           0
         </div>
@@ -242,11 +259,13 @@ exports[`Calculator renders Calculator 1`] = `
       >
         <div
           data-css-zcaaxo=""
+          onClick={[Function]}
         >
           .
         </div>
         <div
           data-css-zcaaxo=""
+          onClick={[Function]}
         >
           =
         </div>

@@ -76,21 +76,25 @@ exports[`Keypad renders Keypad 1`] = `
   >
     <div
       data-css-zcaaxo=""
+      onClick={undefined}
     >
       AC
     </div>
     <div
       data-css-zcaaxo=""
+      onClick={undefined}
     >
       +/-
     </div>
     <div
       data-css-zcaaxo=""
+      onClick={undefined}
     >
       %
     </div>
     <div
       data-css-zcaaxo=""
+      onClick={undefined}
     >
       /
     </div>
@@ -100,21 +104,25 @@ exports[`Keypad renders Keypad 1`] = `
   >
     <div
       data-css-zcaaxo=""
+      onClick={undefined}
     >
       7
     </div>
     <div
       data-css-zcaaxo=""
+      onClick={undefined}
     >
       8
     </div>
     <div
       data-css-zcaaxo=""
+      onClick={undefined}
     >
       9
     </div>
     <div
       data-css-zcaaxo=""
+      onClick={undefined}
     >
       X
     </div>
@@ -124,21 +132,25 @@ exports[`Keypad renders Keypad 1`] = `
   >
     <div
       data-css-zcaaxo=""
+      onClick={undefined}
     >
       4
     </div>
     <div
       data-css-zcaaxo=""
+      onClick={undefined}
     >
       5
     </div>
     <div
       data-css-zcaaxo=""
+      onClick={undefined}
     >
       6
     </div>
     <div
       data-css-zcaaxo=""
+      onClick={undefined}
     >
       -
     </div>
@@ -148,21 +160,25 @@ exports[`Keypad renders Keypad 1`] = `
   >
     <div
       data-css-zcaaxo=""
+      onClick={undefined}
     >
       1
     </div>
     <div
       data-css-zcaaxo=""
+      onClick={undefined}
     >
       2
     </div>
     <div
       data-css-zcaaxo=""
+      onClick={undefined}
     >
       3
     </div>
     <div
       data-css-zcaaxo=""
+      onClick={undefined}
     >
       +
     </div>
@@ -175,6 +191,7 @@ exports[`Keypad renders Keypad 1`] = `
     >
       <div
         data-css-zcaaxo=""
+        onClick={undefined}
       >
         0
       </div>
@@ -184,11 +201,13 @@ exports[`Keypad renders Keypad 1`] = `
     >
       <div
         data-css-zcaaxo=""
+        onClick={undefined}
       >
         .
       </div>
       <div
         data-css-zcaaxo=""
+        onClick={undefined}
       >
         =
       </div>
