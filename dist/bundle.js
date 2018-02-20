@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "59e4ae54be2e1593eb76"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "5d8cb1954e74da48c9ea"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -23108,6 +23108,15 @@ var Calculator = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, (Calculator.__proto__ || Object.getPrototypeOf(Calculator)).call(this));
 
+    _this.handleKeyClick = function (tag) {
+      return function () {
+        _this.setState({
+          clickedTag: tag,
+          display: Number(_this.state.display + tag)
+        });
+      };
+    };
+
     _this.state = {
       display: 0
     };
@@ -23124,8 +23133,8 @@ var Calculator = function (_Component) {
           flexDirection: 'column',
           width: '300px'
         }),
-        _react2.default.createElement(_Display2.default, null),
-        _react2.default.createElement(_Keypad2.default, null)
+        _react2.default.createElement(_Display2.default, { value: this.state.display }),
+        _react2.default.createElement(_Keypad2.default, { handleKeyClick: this.handleKeyClick })
       );
     }
   }]);
@@ -24504,6 +24513,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 var _react = __webpack_require__(3);
 
 var _react2 = _interopRequireDefault(_react);
@@ -24547,114 +24558,52 @@ var Row = function Row(_ref) {
 };
 var Key = function Key(_ref2) {
   var style = _ref2.style,
-      children = _ref2.children;
+      handleOnClick = _ref2.handleOnClick,
+      tag = _ref2.tag;
   return _react2.default.createElement(
     'div',
-    (0, _glamor.css)(keyStyle, style),
-    children
+    _extends({}, (0, _glamor.css)(keyStyle, style), { onClick: handleOnClick(tag) }),
+    tag
   );
 };
 
 var Keypad = function Keypad(_ref3) {
-  var keypadStyle = _ref3.keypadStyle;
+  var keypadStyle = _ref3.keypadStyle,
+      handleKeyClick = _ref3.handleKeyClick;
+
+  var keyProps = {
+    handleOnClick: handleKeyClick
+  };
   return _react2.default.createElement(
     'div',
     (0, _glamor.css)(baseKeypadStyle, keypadStyle),
     _react2.default.createElement(
       Row,
       null,
-      _react2.default.createElement(
-        Key,
-        null,
-        'AC'
-      ),
-      _react2.default.createElement(
-        Key,
-        null,
-        '+/-'
-      ),
-      _react2.default.createElement(
-        Key,
-        null,
-        '%'
-      ),
-      _react2.default.createElement(
-        Key,
-        null,
-        '/'
-      )
+      ['AC', '+/-', '%', '/'].map(function (k) {
+        return _react2.default.createElement(Key, _extends({ key: k, tag: k }, keyProps));
+      })
     ),
     _react2.default.createElement(
       Row,
       null,
-      _react2.default.createElement(
-        Key,
-        null,
-        '7'
-      ),
-      _react2.default.createElement(
-        Key,
-        null,
-        '8'
-      ),
-      _react2.default.createElement(
-        Key,
-        null,
-        '9'
-      ),
-      _react2.default.createElement(
-        Key,
-        null,
-        'X'
-      )
+      ['7', '8', '9', 'X'].map(function (k) {
+        return _react2.default.createElement(Key, _extends({ key: k, tag: k }, keyProps));
+      })
     ),
     _react2.default.createElement(
       Row,
       null,
-      _react2.default.createElement(
-        Key,
-        null,
-        '4'
-      ),
-      _react2.default.createElement(
-        Key,
-        null,
-        '5'
-      ),
-      _react2.default.createElement(
-        Key,
-        null,
-        '6'
-      ),
-      _react2.default.createElement(
-        Key,
-        null,
-        '-'
-      )
+      ['4', '5', '6', '-'].map(function (k) {
+        return _react2.default.createElement(Key, _extends({ key: k, tag: k }, keyProps));
+      })
     ),
     _react2.default.createElement(
       Row,
       null,
-      _react2.default.createElement(
-        Key,
-        null,
-        '1'
-      ),
-      _react2.default.createElement(
-        Key,
-        null,
-        '2'
-      ),
-      _react2.default.createElement(
-        Key,
-        null,
-        '3'
-      ),
-      _react2.default.createElement(
-        Key,
-        null,
-        '+'
-      )
+      ['1', '2', '3', '+'].map(function (k) {
+        return _react2.default.createElement(Key, _extends({ key: k, tag: k }, keyProps));
+      })
     ),
     _react2.default.createElement(
       Row,
@@ -24662,25 +24611,14 @@ var Keypad = function Keypad(_ref3) {
       _react2.default.createElement(
         'div',
         (0, _glamor.css)({ flex: 2 }),
-        _react2.default.createElement(
-          Key,
-          null,
-          '0'
-        )
+        _react2.default.createElement(Key, _extends({ key: '0', tag: '0' }, keyProps))
       ),
       _react2.default.createElement(
         'div',
         (0, _glamor.css)({ display: 'flex', flexDirection: 'row', flex: 2 }),
-        _react2.default.createElement(
-          Key,
-          { style: { flex: 1 } },
-          '.'
-        ),
-        _react2.default.createElement(
-          Key,
-          { style: { flex: 1 } },
-          '='
-        )
+        ['.', '='].map(function (k) {
+          return _react2.default.createElement(Key, _extends({ style: { flex: 1 }, key: k, tag: k }, keyProps));
+        })
       )
     )
   );
