@@ -18,7 +18,10 @@
     "test:jestwatch": "NODE_ENV=test jest --watch"
   },
   "lint-staged": {
-    "*.js": ["yarn lint -- --fix", "git add"]
+    "*.js": [
+      "yarn lint -- --fix",
+      "git add"
+    ]
   },
   "devDependencies": {
     "@storybook/react": "^3.2.13",
@@ -43,6 +46,7 @@
     "webpack-dev-server": "^2.9.2"
   },
   "dependencies": {
+    "bignumber.js": "^6.0.0",
     "glamor": "^2.20.40",
     "prop-types": "^15.6.0",
     "react": "^16.0.0",
