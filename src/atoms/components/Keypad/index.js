@@ -36,50 +36,98 @@ type keyT = {
   style: ?Object,
   handleOnClick: () => {},
   tag: string,
+  disable: boolean,
 };
 
 type keypadT = {
   keypadStyle: ?Object,
-  handleKeyClick: () => {},
+  handleNumberClick: () => {},
+  handleOperatorClick: () => {},
+  hasDecimal: boolean,
+  disableOperators: boolean,
 };
 
 const Row = ({ style, children }: rowT) => (
   <div {...css(keyRowStyle, style)}>{children}</div>
 );
-const Key = ({ style, handleOnClick, tag }: keyT) => (
-  <div {...css(keyStyle, style)} onClick={handleOnClick(tag)}>
+const Key = ({ style, handleOnClick, tag, disable = false }: keyT) => (
+  <div
+    {...css(keyStyle, style, { pointerEvents: disable ? 'none' : '' })}
+    onClick={handleOnClick(tag)}
+  >
     {tag}
   </div>
 );
 
-const Keypad = ({ keypadStyle, handleKeyClick }: keypadT) => {
-  const keyProps = {
-    handleOnClick: handleKeyClick,
-  };
+const Keypad = ({
+  keypadStyle,
+  handleNumberClick,
+  handleOperatorClick,
+  hasDecimal,
+  disableOperators,
+}: keypadT) => {
   return (
     <div {...css(baseKeypadStyle, keypadStyle)}>
       <Row>
         {['AC', '+/-', '%', '/'].map(k => (
-          <Key key={k} tag={k} {...keyProps} />
+          <Key
+            key={k}
+            tag={k}
+            handleOnClick={handleOperatorClick}
+            disable={disableOperators}
+          />
         ))}
       </Row>
       <Row>
-        {['7', '8', '9', 'X'].map(k => <Key key={k} tag={k} {...keyProps} />)}
+        {['7', '8', '9'].map(k => (
+          <Key key={k} tag={k} handleOnClick={handleNumberClick} />
+        ))}
+        <Key
+          key="X"
+          tag="X"
+          handleOnClick={handleOperatorClick}
+          disable={disableOperators}
+        />
       </Row>
       <Row>
-        {['4', '5', '6', '-'].map(k => <Key key={k} tag={k} {...keyProps} />)}
+        {['4', '5', '6'].map(k => (
+          <Key key={k} tag={k} handleOnClick={handleNumberClick} />
+        ))}
+        <Key
+          key="-"
+          tag="-"
+          handleOnClick={handleOperatorClick}
+          disable={disableOperators}
+        />
       </Row>
       <Row>
-        {['1', '2', '3', '+'].map(k => <Key key={k} tag={k} {...keyProps} />)}
+        {['1', '2', '3'].map(k => (
+          <Key key={k} tag={k} handleOnClick={handleNumberClick} />
+        ))}
+        <Key
+          key="+"
+          tag="+"
+          handleOnClick={handleOperatorClick}
+          disable={disableOperators}
+        />
       </Row>
       <Row>
         <div {...css({ flex: 2 })}>
-          <Key key="0" tag="0" {...keyProps} />
+          <Key key="0" tag="0" handleOnClick={handleNumberClick} />
         </div>
         <div {...css({ display: 'flex', flexDirection: 'row', flex: 2 })}>
-          {['.', '='].map(k => (
-            <Key style={{ flex: 1 }} key={k} tag={k} {...keyProps} />
-          ))}
+          <Key
+            key="."
+            tag="."
+            handleOnClick={handleNumberClick}
+            disable={hasDecimal}
+          />
+          <Key
+            key="="
+            tag="="
+            handleOnClick={handleOperatorClick}
+            disable={disableOperators}
+          />
         </div>
       </Row>
     </div>
