@@ -25,7 +25,7 @@ const Display = ({ value }: displayT) => {
             borderRadius: '4px',
           },
         }}
-        type="number"
+        type="text"
         disabled
         value={value}
       />
