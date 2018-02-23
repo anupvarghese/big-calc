@@ -70,12 +70,7 @@ const Keypad = ({
     <div {...css(baseKeypadStyle, keypadStyle)}>
       <Row>
         {['AC', '+/-', '%', '/'].map(k => (
-          <Key
-            key={k}
-            tag={k}
-            handleOnClick={handleOperatorClick}
-            disable={disableOperators}
-          />
+          <Key key={k} tag={k} handleOnClick={handleOperatorClick} />
         ))}
       </Row>
       <Row>

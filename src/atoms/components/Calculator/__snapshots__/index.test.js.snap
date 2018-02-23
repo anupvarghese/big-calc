@@ -124,7 +124,7 @@ exports[`Calculator renders Calculator 1`] = `
       data-css-rvzscm=""
       disabled={true}
       type="text"
-      value="0"
+      value=""
     />
   </div>
   <div

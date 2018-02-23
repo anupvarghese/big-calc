@@ -32,10 +32,10 @@ class Calculator extends Component {
   };
 
   handleOperatorClick = operator => () => {
-    let value = this.state.display;
+    this.resetDisplay = true;
+
     if (operator === '+/-') {
-      value = helper['+/-'](this.state.display);
-      this.resetDisplay = true;
+      const value = helper['+/-'](this.state.display);
       this.setState({
         display: value.toString(),
       });
@@ -43,26 +43,29 @@ class Calculator extends Component {
     }
 
     if (operator === 'AC') {
-      value = helper[operator]();
-      this.resetDisplay = true;
-    }
-
-    if (typeof this.operation === 'function') {
-      value = this.operation(value);
-      this.resetDisplay = true;
-    }
-
-    this.setState({
-      display: value.toString(),
-    });
-
-    if (!['AC', '='].includes(operator) && '+/-' !== operator) {
-      this.operation = helper[operator](value);
-      this.resetDisplay = true;
+      const value = helper[operator]();
+      this.setState({
+        display: value.toString(),
+      });
       return;
     }
 
-    this.operation = null;
+    if (operator === '=') {
+      const value =
+        typeof this.operation === 'function'
+          ? this.operation(this.state.display)
+          : this.state.display;
+      this.setState({
+        display: value.toString(),
+      });
+      this.operation = null;
+      return;
+    }
+
+    if (!['AC', '='].includes(operator) && '+/-' !== operator) {
+      this.operation = helper[operator](this.state.display);
+      return;
+    }
   };
 
   render() {
