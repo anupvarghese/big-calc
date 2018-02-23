@@ -38,7 +38,7 @@ exports[`Display renders Display 1`] = `
   <input
     data-css-rvzscm=""
     disabled={true}
-    type="number"
+    type="text"
     value={undefined}
   />
 </div>
