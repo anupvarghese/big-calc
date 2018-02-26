@@ -17,13 +17,9 @@ const Display = ({ value }: displayT) => {
           flexBasis: '100%',
           borderRadius: '4px',
           border: '1px solid tomato',
-          fontSize: '1.5rem',
-          ':focus': {
-            outline: 'none !important',
-            border: '1px solid blue',
-            boxShadow: '0 0 10px #719ECE',
-            borderRadius: '4px',
-          },
+          fontSize: '1.3rem',
+          paddingLeft: '1rem',
+          paddingRight: '1rem',
         }}
         type="text"
         disabled

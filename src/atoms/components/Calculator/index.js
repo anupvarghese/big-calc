@@ -34,6 +34,7 @@ class Calculator extends Component {
   handleOperatorClick = operator => () => {
     this.resetDisplay = true;
 
+    // negate
     if (operator === '+/-') {
       const value = helper['+/-'](this.state.display);
       this.setState({
@@ -42,6 +43,7 @@ class Calculator extends Component {
       return;
     }
 
+    // all-clear
     if (operator === 'AC') {
       const value = helper[operator]();
       this.setState({
@@ -50,6 +52,7 @@ class Calculator extends Component {
       return;
     }
 
+    // finish calc
     if (operator === '=') {
       const value =
         typeof this.operation === 'function'
@@ -62,6 +65,7 @@ class Calculator extends Component {
       return;
     }
 
+    // continue calc
     if (!['AC', '='].includes(operator) && '+/-' !== operator) {
       this.operation = helper[operator](this.state.display);
       return;
