@@ -24,11 +24,16 @@ class Calculator extends Component {
         display: tag,
       });
       this.resetDisplay = false;
-    } else {
-      this.setState({
-        display: this.state.display + tag,
-      });
+      return;
     }
+
+    if (this.state.display.includes('.') && tag === '.') {
+      return;
+    }
+
+    this.setState({
+      display: this.state.display + tag,
+    });
   };
 
   handleOperatorClick = operator => () => {
@@ -85,12 +90,6 @@ class Calculator extends Component {
         <Keypad
           handleOperatorClick={this.handleOperatorClick}
           handleNumberClick={this.handleNumberClick}
-          hasDecimal={this.state.display && this.state.display.includes('.')}
-          disableOperators={
-            this.state.display &&
-            this.state.display.length === 1 &&
-            this.state.display[0] === '.'
-          }
         />
       </div>
     );

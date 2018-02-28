@@ -43,18 +43,13 @@ type keypadT = {
   keypadStyle: ?Object,
   handleNumberClick: () => {},
   handleOperatorClick: () => {},
-  hasDecimal: boolean,
-  disableOperators: boolean,
 };
 
 const Row = ({ style, children }: rowT) => (
   <div {...css(keyRowStyle, style)}>{children}</div>
 );
-const Key = ({ style, handleOnClick, tag, disable = false }: keyT) => (
-  <div
-    {...css(keyStyle, style, { pointerEvents: disable ? 'none' : '' })}
-    onClick={handleOnClick(tag)}
-  >
+const Key = ({ style, handleOnClick, tag }: keyT) => (
+  <div {...css(keyStyle, style)} onClick={handleOnClick(tag)}>
     {tag}
   </div>
 );
@@ -63,8 +58,6 @@ const Keypad = ({
   keypadStyle,
   handleNumberClick,
   handleOperatorClick,
-  hasDecimal,
-  disableOperators,
 }: keypadT) => {
   return (
     <div {...css(baseKeypadStyle, keypadStyle)}>
@@ -77,52 +70,27 @@ const Keypad = ({
         {['7', '8', '9'].map(k => (
           <Key key={k} tag={k} handleOnClick={handleNumberClick} />
         ))}
-        <Key
-          key="X"
-          tag="X"
-          handleOnClick={handleOperatorClick}
-          disable={disableOperators}
-        />
+        <Key key="X" tag="X" handleOnClick={handleOperatorClick} />
       </Row>
       <Row>
         {['4', '5', '6'].map(k => (
           <Key key={k} tag={k} handleOnClick={handleNumberClick} />
         ))}
-        <Key
-          key="-"
-          tag="-"
-          handleOnClick={handleOperatorClick}
-          disable={disableOperators}
-        />
+        <Key key="-" tag="-" handleOnClick={handleOperatorClick} />
       </Row>
       <Row>
         {['1', '2', '3'].map(k => (
           <Key key={k} tag={k} handleOnClick={handleNumberClick} />
         ))}
-        <Key
-          key="+"
-          tag="+"
-          handleOnClick={handleOperatorClick}
-          disable={disableOperators}
-        />
+        <Key key="+" tag="+" handleOnClick={handleOperatorClick} />
       </Row>
       <Row>
         <div {...css({ flex: 2 })}>
           <Key key="0" tag="0" handleOnClick={handleNumberClick} />
         </div>
         <div {...css({ display: 'flex', flexDirection: 'row', flex: 2 })}>
-          <Key
-            key="."
-            tag="."
-            handleOnClick={handleNumberClick}
-            disable={hasDecimal}
-          />
-          <Key
-            key="="
-            tag="="
-            handleOnClick={handleOperatorClick}
-            disable={disableOperators}
-          />
+          <Key key="." tag="." handleOnClick={handleNumberClick} />
+          <Key key="=" tag="=" handleOnClick={handleOperatorClick} />
         </div>
       </Row>
     </div>
