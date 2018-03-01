@@ -98,13 +98,12 @@ exports[`Calculator renders Calculator 1`] = `
   -webkit-align-items: center;
 }
 
-.css-8g7ilp,
-[data-css-8g7ilp] {
+.css-zcaaxo,
+[data-css-zcaaxo] {
   flex: 1;
   margin: 0.5rem;
   border: 1px solid tomato;
   padding: 1rem;
-  pointer-events: ;
   -webkit-flex: 1;
 }
 
@@ -128,25 +127,25 @@ exports[`Calculator renders Calculator 1`] = `
       data-css-h0wfqv=""
     >
       <div
-        data-css-8g7ilp=""
+        data-css-zcaaxo=""
         onClick={[Function]}
       >
         AC
       </div>
       <div
-        data-css-8g7ilp=""
+        data-css-zcaaxo=""
         onClick={[Function]}
       >
         +/-
       </div>
       <div
-        data-css-8g7ilp=""
+        data-css-zcaaxo=""
         onClick={[Function]}
       >
         %
       </div>
       <div
-        data-css-8g7ilp=""
+        data-css-zcaaxo=""
         onClick={[Function]}
       >
         /
@@ -156,25 +155,25 @@ exports[`Calculator renders Calculator 1`] = `
       data-css-h0wfqv=""
     >
       <div
-        data-css-8g7ilp=""
+        data-css-zcaaxo=""
         onClick={[Function]}
       >
         7
       </div>
       <div
-        data-css-8g7ilp=""
+        data-css-zcaaxo=""
         onClick={[Function]}
       >
         8
       </div>
       <div
-        data-css-8g7ilp=""
+        data-css-zcaaxo=""
         onClick={[Function]}
       >
         9
       </div>
       <div
-        data-css-8g7ilp=""
+        data-css-zcaaxo=""
         onClick={[Function]}
       >
         X
@@ -184,25 +183,25 @@ exports[`Calculator renders Calculator 1`] = `
       data-css-h0wfqv=""
     >
       <div
-        data-css-8g7ilp=""
+        data-css-zcaaxo=""
         onClick={[Function]}
       >
         4
       </div>
       <div
-        data-css-8g7ilp=""
+        data-css-zcaaxo=""
         onClick={[Function]}
       >
         5
       </div>
       <div
-        data-css-8g7ilp=""
+        data-css-zcaaxo=""
         onClick={[Function]}
       >
         6
       </div>
       <div
-        data-css-8g7ilp=""
+        data-css-zcaaxo=""
         onClick={[Function]}
       >
         -
@@ -212,25 +211,25 @@ exports[`Calculator renders Calculator 1`] = `
       data-css-h0wfqv=""
     >
       <div
-        data-css-8g7ilp=""
+        data-css-zcaaxo=""
         onClick={[Function]}
       >
         1
       </div>
       <div
-        data-css-8g7ilp=""
+        data-css-zcaaxo=""
         onClick={[Function]}
       >
         2
       </div>
       <div
-        data-css-8g7ilp=""
+        data-css-zcaaxo=""
         onClick={[Function]}
       >
         3
       </div>
       <div
-        data-css-8g7ilp=""
+        data-css-zcaaxo=""
         onClick={[Function]}
       >
         +
@@ -243,7 +242,7 @@ exports[`Calculator renders Calculator 1`] = `
         data-css-1qeez79=""
       >
         <div
-          data-css-8g7ilp=""
+          data-css-zcaaxo=""
           onClick={[Function]}
         >
           0
@@ -253,13 +252,13 @@ exports[`Calculator renders Calculator 1`] = `
         data-css-q8ffom=""
       >
         <div
-          data-css-8g7ilp=""
+          data-css-zcaaxo=""
           onClick={[Function]}
         >
           .
         </div>
         <div
-          data-css-8g7ilp=""
+          data-css-zcaaxo=""
           onClick={[Function]}
         >
           =

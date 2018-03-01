@@ -59,13 +59,12 @@ exports[`Keypad renders Keypad 1`] = `
   -webkit-align-items: center;
 }
 
-.css-8g7ilp,
-[data-css-8g7ilp] {
+.css-zcaaxo,
+[data-css-zcaaxo] {
   flex: 1;
   margin: 0.5rem;
   border: 1px solid tomato;
   padding: 1rem;
-  pointer-events: ;
   -webkit-flex: 1;
 }
 
@@ -76,25 +75,25 @@ exports[`Keypad renders Keypad 1`] = `
     data-css-h0wfqv=""
   >
     <div
-      data-css-8g7ilp=""
+      data-css-zcaaxo=""
       onClick={undefined}
     >
       AC
     </div>
     <div
-      data-css-8g7ilp=""
+      data-css-zcaaxo=""
       onClick={undefined}
     >
       +/-
     </div>
     <div
-      data-css-8g7ilp=""
+      data-css-zcaaxo=""
       onClick={undefined}
     >
       %
     </div>
     <div
-      data-css-8g7ilp=""
+      data-css-zcaaxo=""
       onClick={undefined}
     >
       /
@@ -104,25 +103,25 @@ exports[`Keypad renders Keypad 1`] = `
     data-css-h0wfqv=""
   >
     <div
-      data-css-8g7ilp=""
+      data-css-zcaaxo=""
       onClick={undefined}
     >
       7
     </div>
     <div
-      data-css-8g7ilp=""
+      data-css-zcaaxo=""
       onClick={undefined}
     >
       8
     </div>
     <div
-      data-css-8g7ilp=""
+      data-css-zcaaxo=""
       onClick={undefined}
     >
       9
     </div>
     <div
-      data-css-8g7ilp=""
+      data-css-zcaaxo=""
       onClick={undefined}
     >
       X
@@ -132,25 +131,25 @@ exports[`Keypad renders Keypad 1`] = `
     data-css-h0wfqv=""
   >
     <div
-      data-css-8g7ilp=""
+      data-css-zcaaxo=""
       onClick={undefined}
     >
       4
     </div>
     <div
-      data-css-8g7ilp=""
+      data-css-zcaaxo=""
       onClick={undefined}
     >
       5
     </div>
     <div
-      data-css-8g7ilp=""
+      data-css-zcaaxo=""
       onClick={undefined}
     >
       6
     </div>
     <div
-      data-css-8g7ilp=""
+      data-css-zcaaxo=""
       onClick={undefined}
     >
       -
@@ -160,25 +159,25 @@ exports[`Keypad renders Keypad 1`] = `
     data-css-h0wfqv=""
   >
     <div
-      data-css-8g7ilp=""
+      data-css-zcaaxo=""
       onClick={undefined}
     >
       1
     </div>
     <div
-      data-css-8g7ilp=""
+      data-css-zcaaxo=""
       onClick={undefined}
     >
       2
     </div>
     <div
-      data-css-8g7ilp=""
+      data-css-zcaaxo=""
       onClick={undefined}
     >
       3
     </div>
     <div
-      data-css-8g7ilp=""
+      data-css-zcaaxo=""
       onClick={undefined}
     >
       +
@@ -191,7 +190,7 @@ exports[`Keypad renders Keypad 1`] = `
       data-css-1qeez79=""
     >
       <div
-        data-css-8g7ilp=""
+        data-css-zcaaxo=""
         onClick={undefined}
       >
         0
@@ -201,13 +200,13 @@ exports[`Keypad renders Keypad 1`] = `
       data-css-q8ffom=""
     >
       <div
-        data-css-8g7ilp=""
+        data-css-zcaaxo=""
         onClick={undefined}
       >
         .
       </div>
       <div
-        data-css-8g7ilp=""
+        data-css-zcaaxo=""
         onClick={undefined}
       >
         =
