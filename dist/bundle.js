@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "2ca2ebe2940b0280d4c4"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "508d45c0712d38c3aca5"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -23119,11 +23119,16 @@ var Calculator = function (_Component) {
             display: tag
           });
           _this.resetDisplay = false;
-        } else {
-          _this.setState({
-            display: _this.state.display + tag
-          });
+          return;
         }
+
+        if (_this.state.display.includes('.') && tag === '.') {
+          return;
+        }
+
+        _this.setState({
+          display: _this.state.display + tag
+        });
       };
     };
 
@@ -23190,9 +23195,7 @@ var Calculator = function (_Component) {
         _react2.default.createElement(_Display2.default, { value: this.state.display }),
         _react2.default.createElement(_Keypad2.default, {
           handleOperatorClick: this.handleOperatorClick,
-          handleNumberClick: this.handleNumberClick,
-          hasDecimal: this.state.display && this.state.display.includes('.'),
-          disableOperators: this.state.display && this.state.display.length === 1 && this.state.display[0] === '.'
+          handleNumberClick: this.handleNumberClick
         })
       );
     }
@@ -24618,14 +24621,10 @@ var Row = function Row(_ref) {
 var Key = function Key(_ref2) {
   var style = _ref2.style,
       handleOnClick = _ref2.handleOnClick,
-      tag = _ref2.tag,
-      _ref2$disable = _ref2.disable,
-      disable = _ref2$disable === undefined ? false : _ref2$disable;
+      tag = _ref2.tag;
   return _react2.default.createElement(
     'div',
-    _extends({}, (0, _glamor.css)(keyStyle, style, { pointerEvents: disable ? 'none' : '' }), {
-      onClick: handleOnClick(tag)
-    }),
+    _extends({}, (0, _glamor.css)(keyStyle, style), { onClick: handleOnClick(tag) }),
     tag
   );
 };
@@ -24633,9 +24632,7 @@ var Key = function Key(_ref2) {
 var Keypad = function Keypad(_ref3) {
   var keypadStyle = _ref3.keypadStyle,
       handleNumberClick = _ref3.handleNumberClick,
-      handleOperatorClick = _ref3.handleOperatorClick,
-      hasDecimal = _ref3.hasDecimal,
-      disableOperators = _ref3.disableOperators;
+      handleOperatorClick = _ref3.handleOperatorClick;
 
   return _react2.default.createElement(
     'div',
@@ -24653,12 +24650,7 @@ var Keypad = function Keypad(_ref3) {
       ['7', '8', '9'].map(function (k) {
         return _react2.default.createElement(Key, { key: k, tag: k, handleOnClick: handleNumberClick });
       }),
-      _react2.default.createElement(Key, {
-        key: 'X',
-        tag: 'X',
-        handleOnClick: handleOperatorClick,
-        disable: disableOperators
-      })
+      _react2.default.createElement(Key, { key: 'X', tag: 'X', handleOnClick: handleOperatorClick })
     ),
     _react2.default.createElement(
       Row,
@@ -24666,12 +24658,7 @@ var Keypad = function Keypad(_ref3) {
       ['4', '5', '6'].map(function (k) {
         return _react2.default.createElement(Key, { key: k, tag: k, handleOnClick: handleNumberClick });
       }),
-      _react2.default.createElement(Key, {
-        key: '-',
-        tag: '-',
-        handleOnClick: handleOperatorClick,
-        disable: disableOperators
-      })
+      _react2.default.createElement(Key, { key: '-', tag: '-', handleOnClick: handleOperatorClick })
     ),
     _react2.default.createElement(
       Row,
@@ -24679,12 +24666,7 @@ var Keypad = function Keypad(_ref3) {
       ['1', '2', '3'].map(function (k) {
         return _react2.default.createElement(Key, { key: k, tag: k, handleOnClick: handleNumberClick });
       }),
-      _react2.default.createElement(Key, {
-        key: '+',
-        tag: '+',
-        handleOnClick: handleOperatorClick,
-        disable: disableOperators
-      })
+      _react2.default.createElement(Key, { key: '+', tag: '+', handleOnClick: handleOperatorClick })
     ),
     _react2.default.createElement(
       Row,
@@ -24697,18 +24679,8 @@ var Keypad = function Keypad(_ref3) {
       _react2.default.createElement(
         'div',
         (0, _glamor.css)({ display: 'flex', flexDirection: 'row', flex: 2 }),
-        _react2.default.createElement(Key, {
-          key: '.',
-          tag: '.',
-          handleOnClick: handleNumberClick,
-          disable: hasDecimal
-        }),
-        _react2.default.createElement(Key, {
-          key: '=',
-          tag: '=',
-          handleOnClick: handleOperatorClick,
-          disable: disableOperators
-        })
+        _react2.default.createElement(Key, { key: '.', tag: '.', handleOnClick: handleNumberClick }),
+        _react2.default.createElement(Key, { key: '=', tag: '=', handleOnClick: handleOperatorClick })
       )
     )
   );
