@@ -21,7 +21,7 @@ class Calculator extends Component {
   handleNumberClick = tag => () => {
     if (this.resetDisplay) {
       this.setState({
-        display: tag,
+        display: tag === '.' ? `0.` : tag,
       });
       this.resetDisplay = false;
       return;
@@ -29,6 +29,12 @@ class Calculator extends Component {
 
     if (this.state.display.includes('.') && tag === '.') {
       return;
+    }
+
+    if (this.state.display === '' && tag === '.') {
+      this.setState({
+        display: '0.',
+      });
     }
 
     this.setState({
