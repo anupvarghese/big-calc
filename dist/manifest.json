@@ -2,8 +2,9 @@
   "manifest_version": 2,
 
   "name": "Big Calc",
+
   "description": "This extension will show how decimals work in JS",
-  "version": "1.0",
+  "version": "2.0",
 
   "browser_action": {
     "default_popup": "index.html"
