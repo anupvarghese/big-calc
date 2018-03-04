@@ -61,7 +61,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "508d45c0712d38c3aca5"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "3ff97a27a8d75e51523c"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -23116,7 +23116,7 @@ var Calculator = function (_Component) {
       return function () {
         if (_this.resetDisplay) {
           _this.setState({
-            display: tag
+            display: tag === '.' ? '0.' : tag
           });
           _this.resetDisplay = false;
           return;
@@ -23124,6 +23124,12 @@ var Calculator = function (_Component) {
 
         if (_this.state.display.includes('.') && tag === '.') {
           return;
+        }
+
+        if (_this.state.display === '' && tag === '.') {
+          _this.setState({
+            display: '0.'
+          });
         }
 
         _this.setState({
