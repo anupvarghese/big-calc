@@ -1,8 +1,6 @@
-## Simple React Starter
+## Big Calc
 
-### How
+#### What
+Big calc is a simple calculator build using [React](https://reactjs.org/) & [BigNumber](https://www.npmjs.com/package/bignumber.js)
 
-- Clone
-- `yarn`
-- `yarn start`
-- Go to `http://localhost:3000`
+It is available as a [Chrome extension](https://chrome.google.com/webstore/detail/big-calc/jlkaidnchiknhmigbgfmopmfnoiemnpe?hl=en-GB) & also [here]( https://anupvarghese.github.io/big-calc/)
