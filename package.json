@@ -15,7 +15,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "test:jest": "NODE_ENV=test jest",
-    "test:jestwatch": "NODE_ENV=test jest --watch"
+    "test:jestwatch": "NODE_ENV=test jest --watch",
+    "build:prod": "webpack --config ./webpack.config.babel.js -p && zip -r -j package.zip dist/*"
   },
   "lint-staged": {
     "*.js": [
