@@ -20,6 +20,7 @@ const Display = ({ value }: displayT) => {
           fontSize: '1.3rem',
           paddingLeft: '1rem',
           paddingRight: '1rem',
+          fontFamily: 'Copse serif',
         }}
         type="text"
         disabled

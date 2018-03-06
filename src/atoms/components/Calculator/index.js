@@ -90,6 +90,7 @@ class Calculator extends Component {
           display: 'flex',
           flexDirection: 'column',
           width: '300px',
+          fontFamily: 'Copse serif',
         })}
       >
         <Display value={this.state.display} />
