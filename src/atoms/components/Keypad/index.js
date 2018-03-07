@@ -2,13 +2,13 @@
 
 import React from 'react';
 import { css } from 'glamor';
+import C from '../../../constants';
 
 const baseKeypadStyle = {
   display: 'flex',
   flexDirection: 'column',
-  border: '1px solid tomato',
-  borderRadius: '4px',
-  marginTop: '0.5rem',
+  background: C.GRAY_BROWN,
+  borderTopColor: C.BLACK,
 };
 
 const keyRowStyle = {
@@ -20,11 +20,17 @@ const keyRowStyle = {
   textAlign: 'center',
 };
 
-const keyStyle = {
-  flex: 1,
-  margin: '0.5rem',
-  border: `1px solid tomato`,
-  padding: '1rem',
+const keyStyle = (operator = false) => {
+  const color = operator ? C.ORANGE : C.GRAY_WHITE;
+  return {
+    flex: 1,
+    margin: '0.5px',
+    border: `2px solid ${color}`,
+    padding: '1rem',
+    background: color,
+    fontWeight: 'medium',
+    fontSize: '1.3rem',
+  };
 };
 
 type rowT = {
@@ -36,7 +42,6 @@ type keyT = {
   style: ?Object,
   handleOnClick: () => {},
   tag: string,
-  disable: boolean,
 };
 
 type keypadT = {
@@ -49,7 +54,10 @@ const Row = ({ style, children }: rowT) => (
   <div {...css(keyRowStyle, style)}>{children}</div>
 );
 const Key = ({ style, handleOnClick, tag }: keyT) => (
-  <div {...css(keyStyle, style)} onClick={handleOnClick(tag)}>
+  <div
+    {...css(keyStyle(['/', 'X', '-', '+', '='].includes(tag)), style)}
+    onClick={handleOnClick(tag)}
+  >
     {tag}
   </div>
 );

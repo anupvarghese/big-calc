@@ -3,6 +3,7 @@
 import React from 'react';
 import { css } from 'glamor';
 import Input from '../../input';
+import C from '../../../constants';
 
 type displayT = {
   value: number,
@@ -13,14 +14,16 @@ const Display = ({ value }: displayT) => {
     <div {...css({ display: 'flex', flexDirection: 'row' })}>
       <Input
         baseStyle={{
-          minHeight: '4rem',
+          minHeight: '5rem',
           flexBasis: '100%',
-          borderRadius: '4px',
-          border: '1px solid tomato',
-          fontSize: '1.3rem',
+          background: C.BLACK,
+          borderColor: `${C.BLACK}`,
+          fontSize: '1.8rem',
           paddingLeft: '1rem',
           paddingRight: '1rem',
-          fontFamily: 'Copse serif',
+          textAlign: 'right',
+          fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif',
+          color: 'white',
         }}
         type="text"
         disabled

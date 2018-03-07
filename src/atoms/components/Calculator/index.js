@@ -2,6 +2,7 @@
 
 import React, { Component } from 'react';
 import { css } from 'glamor';
+import BigNumber from 'bignumber.js';
 import Keypad from '../Keypad';
 import Display from '../Display';
 import helper from '../../../utils';
@@ -11,14 +12,13 @@ class Calculator extends Component {
     super();
     this.state = {
       display: '',
-      hasDecimal: false,
-      operator: '',
+      operation: null,
     };
-    this.operation = null;
     this.resetDisplay = false;
   }
 
   handleNumberClick = tag => () => {
+    const { display } = this.state;
     if (this.resetDisplay) {
       this.setState({
         display: tag === '.' ? `0.` : tag,
@@ -27,27 +27,28 @@ class Calculator extends Component {
       return;
     }
 
-    if (this.state.display.includes('.') && tag === '.') {
+    if (display.includes('.') && tag === '.') {
       return;
     }
 
-    if (this.state.display === '' && tag === '.') {
+    if (display === '' && tag === '.') {
       this.setState({
         display: '0.',
       });
+      return;
     }
 
     this.setState({
-      display: this.state.display + tag,
+      display: new BigNumber(this.state.display + tag).toString(),
     });
   };
 
   handleOperatorClick = operator => () => {
     this.resetDisplay = true;
-
+    const { display } = this.state;
     // negate
     if (operator === '+/-') {
-      const value = helper['+/-'](this.state.display);
+      const value = helper['+/-'](display);
       this.setState({
         display: value.toString(),
       });
@@ -56,9 +57,9 @@ class Calculator extends Component {
 
     // all-clear
     if (operator === 'AC') {
-      const value = helper[operator]();
       this.setState({
-        display: value.toString(),
+        display: '0',
+        operation: null,
       });
       return;
     }
@@ -66,19 +67,27 @@ class Calculator extends Component {
     // finish calc
     if (operator === '=') {
       const value =
-        typeof this.operation === 'function'
-          ? this.operation(this.state.display)
-          : this.state.display;
+        typeof this.state.operation === 'function'
+          ? this.state.operation(display)
+          : display;
       this.setState({
         display: value.toString(),
+        operation: null,
       });
-      this.operation = null;
       return;
     }
 
     // continue calc
     if (!['AC', '='].includes(operator) && '+/-' !== operator) {
-      this.operation = helper[operator](this.state.display);
+      const value =
+        typeof this.state.operation === 'function'
+          ? this.state.operation(display)
+          : display;
+      this.setState({
+        display: value.toString(),
+        operation: helper[operator](value),
+      });
+      this.operation = helper[operator](value);
       return;
     }
   };
@@ -89,8 +98,8 @@ class Calculator extends Component {
         {...css({
           display: 'flex',
           flexDirection: 'column',
-          width: '300px',
-          fontFamily: 'Copse serif',
+          width: '350px',
+          fontFamily: '-apple-system, BlinkMacSystemFont, sans-serif',
         })}
       >
         <Display value={this.state.display} />

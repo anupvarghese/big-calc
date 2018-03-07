@@ -9,7 +9,7 @@
   "scripts": {
     "lint": "yarn eslint src",
     "lint:fix": "yarn lint -- --fix",
-    "build:dev": "webpack --config ./webpack.config.babel.js",
+    "build:dev": "webpack --config ./webpack.config.babel.js -p",
     "start": "webpack-dev-server --colors --config ./webpack.config.babel.js",
     "precommit": "lint-staged",
     "storybook": "start-storybook -p 6006",

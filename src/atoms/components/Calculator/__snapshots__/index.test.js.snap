@@ -1,15 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Calculator renders Calculator 1`] = `
-.css-1rh9gak,
-[data-css-1rh9gak] {
+.css-169sewc,
+[data-css-169sewc] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
   flex-direction: column;
-  width: 300px;
+  width: 350px;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -28,29 +29,31 @@ exports[`Calculator renders Calculator 1`] = `
   -webkit-flex-direction: row;
 }
 
-.css-1vy5v8k,
-[data-css-1vy5v8k] {
-  min-height: 4rem;
+.css-1to9pp2,
+[data-css-1to9pp2] {
+  min-height: 5rem;
   flex-basis: 100%;
-  border-radius: 4px;
-  border: 1px solid tomato;
-  font-size: 1.3rem;
+  background: #292929;
+  border-color: #292929;
+  font-size: 1.8rem;
   padding-left: 1rem;
   padding-right: 1rem;
+  text-align: right;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  color: white;
   -webkit-flex-basis: 100%;
 }
 
-.css-tcqo1y,
-[data-css-tcqo1y] {
+.css-1rjzdbu,
+[data-css-1rjzdbu] {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
   flex-direction: column;
-  border: 1px solid tomato;
-  border-radius: 4px;
-  margin-top: 0.5rem;
+  background: #8E8E8E;
+  border-top-color: #292929;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -98,54 +101,69 @@ exports[`Calculator renders Calculator 1`] = `
   -webkit-align-items: center;
 }
 
-.css-zcaaxo,
-[data-css-zcaaxo] {
+.css-ehgdb,
+[data-css-ehgdb] {
   flex: 1;
-  margin: 0.5rem;
-  border: 1px solid tomato;
+  margin: 0.5px;
+  border: 2px solid #D6D6D6;
   padding: 1rem;
+  background: #D6D6D6;
+  font-weight: medium;
+  font-size: 1.3rem;
+  -webkit-flex: 1;
+}
+
+.css-ivl1kh,
+[data-css-ivl1kh] {
+  flex: 1;
+  margin: 0.5px;
+  border: 2px solid #E99748;
+  padding: 1rem;
+  background: #E99748;
+  font-weight: medium;
+  font-size: 1.3rem;
   -webkit-flex: 1;
 }
 
 <div
-  data-css-1rh9gak=""
+  data-css-169sewc=""
 >
   <div
     data-css-9v06sd=""
   >
     <input
-      data-css-1vy5v8k=""
+      data-css-1to9pp2=""
       disabled={true}
       type="text"
       value=""
     />
   </div>
   <div
-    data-css-tcqo1y=""
+    data-css-1rjzdbu=""
   >
     <div
       data-css-h0wfqv=""
     >
       <div
-        data-css-zcaaxo=""
+        data-css-ehgdb=""
         onClick={[Function]}
       >
         AC
       </div>
       <div
-        data-css-zcaaxo=""
+        data-css-ehgdb=""
         onClick={[Function]}
       >
         +/-
       </div>
       <div
-        data-css-zcaaxo=""
+        data-css-ehgdb=""
         onClick={[Function]}
       >
         %
       </div>
       <div
-        data-css-zcaaxo=""
+        data-css-ivl1kh=""
         onClick={[Function]}
       >
         /
@@ -155,25 +173,25 @@ exports[`Calculator renders Calculator 1`] = `
       data-css-h0wfqv=""
     >
       <div
-        data-css-zcaaxo=""
+        data-css-ehgdb=""
         onClick={[Function]}
       >
         7
       </div>
       <div
-        data-css-zcaaxo=""
+        data-css-ehgdb=""
         onClick={[Function]}
       >
         8
       </div>
       <div
-        data-css-zcaaxo=""
+        data-css-ehgdb=""
         onClick={[Function]}
       >
         9
       </div>
       <div
-        data-css-zcaaxo=""
+        data-css-ivl1kh=""
         onClick={[Function]}
       >
         X
@@ -183,25 +201,25 @@ exports[`Calculator renders Calculator 1`] = `
       data-css-h0wfqv=""
     >
       <div
-        data-css-zcaaxo=""
+        data-css-ehgdb=""
         onClick={[Function]}
       >
         4
       </div>
       <div
-        data-css-zcaaxo=""
+        data-css-ehgdb=""
         onClick={[Function]}
       >
         5
       </div>
       <div
-        data-css-zcaaxo=""
+        data-css-ehgdb=""
         onClick={[Function]}
       >
         6
       </div>
       <div
-        data-css-zcaaxo=""
+        data-css-ivl1kh=""
         onClick={[Function]}
       >
         -
@@ -211,25 +229,25 @@ exports[`Calculator renders Calculator 1`] = `
       data-css-h0wfqv=""
     >
       <div
-        data-css-zcaaxo=""
+        data-css-ehgdb=""
         onClick={[Function]}
       >
         1
       </div>
       <div
-        data-css-zcaaxo=""
+        data-css-ehgdb=""
         onClick={[Function]}
       >
         2
       </div>
       <div
-        data-css-zcaaxo=""
+        data-css-ehgdb=""
         onClick={[Function]}
       >
         3
       </div>
       <div
-        data-css-zcaaxo=""
+        data-css-ivl1kh=""
         onClick={[Function]}
       >
         +
@@ -242,7 +260,7 @@ exports[`Calculator renders Calculator 1`] = `
         data-css-1qeez79=""
       >
         <div
-          data-css-zcaaxo=""
+          data-css-ehgdb=""
           onClick={[Function]}
         >
           0
@@ -252,13 +270,13 @@ exports[`Calculator renders Calculator 1`] = `
         data-css-q8ffom=""
       >
         <div
-          data-css-zcaaxo=""
+          data-css-ehgdb=""
           onClick={[Function]}
         >
           .
         </div>
         <div
-          data-css-zcaaxo=""
+          data-css-ivl1kh=""
           onClick={[Function]}
         >
           =
