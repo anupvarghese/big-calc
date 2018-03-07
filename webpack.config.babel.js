@@ -4,7 +4,7 @@ import path from 'path';
 export default {
   entry: ['./src/index.js'],
   output: {
-    path: path.resolve(__dirname, './dist'), // eslint-disable-line no-undef
+    path: path.resolve(__dirname, './docs/dist'), // eslint-disable-line no-undef
     publicPath: 'http://localhost:3000/',
     filename: 'bundle.js',
   },
